@@ -6,4 +6,5 @@ numbers = {
         }
 phone = input('Phone: ')
 for number in phone:
-    print(numbers.get(nuber, '!')end=' ')
+    print(numbers.get(number, '!'), end=' ')
+
