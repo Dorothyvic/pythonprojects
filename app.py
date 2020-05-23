@@ -37,7 +37,19 @@ class App:
             cal = 100 * weight
             return f'You are {cal}bs'
 
-    def
+    def guess(self):
+        secret_number = 9
+        guess_count = 0
+        guess_limit = 3
+        while guess_count < guess_limit:
+            guess = int(input('Guess: '))
+            guess_count += 1
+            if guess == secret_number:
+                return 'You won'
+                break
+        else:
+            return 'Sorry, you failed'
+
 
 app = App()
 print(app.person())
@@ -45,3 +57,4 @@ print(app.birthyear())
 print(app.house_pay())
 print(app.patient())
 print(app.weightconverter())
+print(app.guess())
