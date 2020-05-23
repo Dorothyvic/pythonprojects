@@ -21,15 +21,27 @@ class App:
     def patient(self):
         name = 'dorothy'
         if len(name) < 3:
-            print('Name must be at least three characters')
+            return 'Name must be at least three characters'
         elif len(name) > 50:
-            print('Name can be a maximum of 50 characters')
+            return 'Name can be a maximum of 50 characters'
         else:
-            print('Name looks good!')
+            return 'Name looks good!'
 
+    def weightconverter(self):
+        weight = int(input('Weight: '))
+        unit = input('(L)bs or (K)kg: ')
+        if unit.upper() == 'L':
+            cal = 0.45 * weight
+            return f'You are {cal}kg'
+        else:
+            cal = 100 * weight
+            return f'You are {cal}bs'
+
+    def
 
 app = App()
 print(app.person())
 print(app.birthyear())
 print(app.house_pay())
 print(app.patient())
+print(app.weightconverter())
